@@ -16,22 +16,23 @@ public class BigNumArith{
             String exp = sc.nextLine();
             PrintWriter pw = new PrintWriter("output.txt");
             AStack numStack = new AStack(exp.length());
-            char zero = '0';
+            //char zero = '0';
+            LinkedList<Character> numChars = new LinkedList<Character>();
 
             for(int i = 0; i<exp.length(); i++){
-                int count = 0;
-                int [] numChars = new int[exp.length()];
-                if(exp.charAt(i) == (zero)){
-                    numChars[count] = (int)exp.charAt(i);
-                    count++;
-                    //pw.println(exp.charAt(i));
-                    //numStack.push(exp.charAt(i));
+                if(exp.charAt(i) != '0') {
+                    numChars.append(exp.charAt(i));
+                }
+            }
+            if((numChars. == '0') && (numChars.next == '0')) {
+                numChars.remove(numChars.next);
+            }
 
-                }
-                for(int j = 0; j< numChars.length; j++){
-                    pw.println(exp.charAt(j));
-                }
-                pw.close();
+                numChars.print();
+                //for(int j = 0; j< numChars.size(); j++){
+                  //  pw.println(exp.charAt(j));
+                //}
+                //pw.close();
                 //try {
                    // PrintWriter pw = new PrintWriter("output.txt");
                 //pw.println(exp.charAt(i));
@@ -49,10 +50,7 @@ public class BigNumArith{
                     System.out.println("Something went wrong");
                     System.exit(-1);
                 } */
-            }
 
-
-            //System.out.println(arith);
         }catch (FileNotFoundException e) {
             System.out.println("Error, file could not be found!");
             System.exit(-1);
