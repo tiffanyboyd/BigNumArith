@@ -155,4 +155,25 @@ public class LinkedList <Type> {
             }
         return current.data;
     }
+
+    /**
+     * This method will add all numbers and return the sum.
+     */
+    //public LinkedList add(LinkedList A, LinkedList B){
+//
+  //  }
+
+    /**
+     * this method converts a string to LinkedList.
+     * @param a String to convert
+     * @return LinkedList of elements within a string
+     */
+    public LinkedList strToLL(String a){ //static method in main
+        LinkedList A = new LinkedList();
+        for(int i = a.length()-1; i > 0; i++) {
+            //getNumericValue
+            A.add(a.charAt(i));
+        }
+        return A;
+    }
 }
